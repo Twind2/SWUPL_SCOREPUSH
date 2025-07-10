@@ -6,13 +6,13 @@
 > 本项目目前仅适配**西南政法大学**的教务系统(**正方教务系统**)。非西南政法大学的学生如果想使用此脚本，需要自行修改 `getscore.py` 文件中的 `url` 变量以及可能的 `headers` 和 `data` 参数，以适配您所在学校的教务系统。
 
 > **⚠️ 重要提醒**
-> Fork后请手动删除**grades_json_old.json**内的文件内容！！！
+> 请手动删除**grades_json_old.json**内的文件内容！！！
 
 ## ✨ 项目特色
 
 * **自动化运行**: 利用 GitHub Actions，可以设定为每小时自动运行一次，无需手动操作。
 * **实时通知**: 一旦有新成绩发布，脚本会立刻通过 WxPusher 发送通知给你，让你第一时间了解成绩情况。
-* **易于部署**: 只需要 Fork 本项目，并对 `secrets` 进行简单的配置，就可以马上使用。
+* **易于部署**: 只需要 下载 本项目，并对 `secrets` 进行简单的配置，就可以马上使用。
 * **保护隐私**: 所有的敏感信息，如 `Cookie` 和 `appToken`，都存储在 GitHub 的 `Secrets` 中，不会泄露给任何人。
 
 ## 🚀 工作流程
@@ -29,9 +29,9 @@
 
 ## 🛠️ 如何配置和使用
 
-### 第一步：Fork 本项目
+### 第一步：下载本项目并建立仓库
 
-在GitHub中点击本项目页面右上角的 **Fork** 按钮，将此项目复制到你自己的 GitHub 仓库中。
+在GitHub中点击本项目页面右上角的 **CODE** 按钮，点击Download Zip下载完整代码。**自行建立仓库防止可能出现的各种问题。**
 
 ### 第二步：配置 GitHub Secrets
 
@@ -76,6 +76,7 @@
   
 ### 第三步：启用 GitHub Actions
 
+0.  在Settings-Actions-General-Workflow permissions中，选择Read and write permissions并保存。
 1.  进入你 Fork 的仓库页面，点击 **Actions** 选项卡。
 2.  如果看到一个 "I understand my workflows, go ahead and enable them" 的按钮，请点击它来启用 GitHub Actions。
 3.  你可以通过点击 **Score Push Workflow** -> **Run workflow** -> **Run workflow** 来手动触发一次工作流，以测试配置是否正确。
